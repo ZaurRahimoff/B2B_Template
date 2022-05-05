@@ -1,180 +1,371 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>B2B</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>B2B</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <script defer src="assets/plugins/fontawesome/js/all.js"></script>
 
-	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-	<script defer src="assets/plugins/fontawesome/js/all.js"></script>
-
-	<link rel="stylesheet" href="assets/css/custom.css">
-
+    <link rel="stylesheet" href="assets/css/custom.css" />
 </head>
 
 <body>
-
-
-	<div class="wrapper d-flex align-items-stretch">
-		<nav id="sidebar">
-			<!-- <div class="custom-menu">
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <!-- <div class="custom-menu">
 				<button type="button" id="sidebarCollapse" class="btn btn-primary">
 					<i class="fa fa-bars"></i>
 					<span class="sr-only">Toggle Menu</span>
 				</button>
 			</div> -->
-			<div class="sidebar-menu p-4">
-				<h1>
-					<a href="index.html" class="logo d-flex justify-content-center flex-wrap">
-						<img class="img-fluid"
-							src="https://cdn.teknofestazerbaycan.org/media/upload/userFormUpload/uy6uuQyKiTU9WJLu0J2rQYvfO0JimcWh.png"
-							alt="">
-						<span class="logo-title"><span>Tekno</span><span>Fest</span></span>
-					</a>
-				</h1>
-				<ul class="list-unstyled components mb-5">
-					<li class="active">
-						<a href="#"><span class="fa fa-home me-3"></span> Home</a>
-					</li>
-					<li>
-						<a href="#"><span class="fa fa-user me-3"></span> About</a>
-					</li>
-					<li>
-						<a href="#"><span class="fa fa-briefcase me-3"></span> Works</a>
-					</li>
-					<li>
-						<a href="#"><span class="fa fa-sticky-note me-3"></span> Blog</a>
-					</li>
-					<li>
-						<a href="#"><span class="fa fa-suitcase me-3"></span> Gallery</a>
-					</li>
-					<li>
-						<a href="#"><span class="fa fa-cogs me-3"></span> Services</a>
-					</li>
-					<li>
-						<a href="#"><span class="fa fa-paper-plane me-3"></span> Contacts</a>
-					</li>
+            <div class="sidebar-menu p-4">
+                <h1>
+                    <a href="index.html" class="logo-white d-flex justify-content-center flex-wrap">
+                        <img class="img-fluid" src="https://cdn.teknofestazerbaycan.org/media/upload/userFormUpload/nX9FOgzsfoABsGeaRa3nlpQCsDhChKsF.png" alt="" />
+                        <span class="logo-title"><span>Tekno</span><span>Fest</span></span>
+                    </a>
+                </h1>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="index.html"><span class="fa fa-home me-3"></span> Home</a>
+                    </li>
+                    <li>
+                        <a href="description.html"><span class="fa fa-info-circle me-3"></span> Profile description</a>
+                    </li>
+                    <li>
+                        <a href="startup-form.html"><span class="fa fa-pen me-3"></span> Profile edit</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="fa fa-handshake me-3"></span> My appointments</a>
+                    </li>
+                    <li>
+                        <a href="login.html"><span class="fa fa-user me-3"></span> Login</a>
+                    </li>
+                </ul>
 
-				</ul>
+                <div class="footer">
+                    <p>Copyright &copy;</p>
+                </div>
+            </div>
+        </nav>
 
-
-				<div class="footer">
-					<p>
-
-						Copyright &copy;
-
-					</p>
-				</div>
-
-			</div>
-		</nav>
-
-		<div class="main">
-
-
-			<nav class="navbar navbar-expand navbar-light navbar-bg px-4 px-md-2">
-				<div class="custom-menu me-2">
-					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+        <div class="main">
+            <nav class="navbar navbar-expand navbar-light navbar-bg px-4 px-md-2">
+                <div class="custom-menu me-2">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
 						<div class="hamburger is-active" id="hamburger">
 							<span class="line"></span>
 							<span class="line"></span>
 							<span class="line"></span>
 						</div>
 					</button>
-				</div>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav navbar-align d-flex justify-content-end ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-flag dropdown-toggle language-dropdown" href="#" id="languageDropdown" data-bs-toggle="dropdown">
+                                <img src="assets/imgs/flags/us.png" alt="English" />
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <img src="assets/imgs/flags/us.png" alt="English" width="20" class="align-middle me-1" />
+                                    <span class="align-middle">English</span>
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    <img src="assets/imgs/flags/ru.png" alt="Russian" width="20" class="align-middle me-1" />
+                                    <span class="align-middle">Russian</span>
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    <img src="assets/imgs/flags/az.png" alt="Azerbaijani" width="20" class="align-middle me-1" />
+                                    <span class="align-middle">Azerbaijani</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="content p-4 p-md-5 pt-5">
+                <div class="container-fluid p-0">
+                    <div class="row mb-2 mb-xl-3">
+                        <div class="col-xl-12 col-xxl-12">
+                            <div class="content-wrapper team-profile">
+                                <!-- Content -->
+
+                                <div class="container-xxl flex-grow-1 container-p-y p-0">
+                                    <h4 class="fw-bold py-3 mb-4">
+                                        <span class="text-muted fw-light">Company /</span> Startup description
+                                    </h4>
+
+                                    <!-- Header -->
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card mb-4">
+                                                <div class="team-profile-header-banner">
+                                                    <img src="assets/imgs/profile-banner.png" alt="Banner image" class="rounded-top img-fluid" />
+                                                </div>
+                                                <div class="team-profile-header d-flex flex-column flex-sm-row text-sm-start text-center mb-4">
+                                                    <div class="flex-shrink-0 mt-n2 mx-sm-0 mx-auto">
+                                                        <img src="https://cdn.teknofestazerbaycan.org/media/upload/userFormUpload/icky2MWj9WkGuv9g76tnVQpVrnGU8bdb.png" alt="team image" class="d-block h-auto ms-0 ms-sm-4 rounded team-profile-img" />
+                                                    </div>
+                                                    <div class="flex-grow-1 mt-3 mt-sm-5">
+                                                        <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-4 flex-md-row flex-column gap-4">
+                                                            <div class="team-profile-info">
+                                                                <h4>Some Team</h4>
+                                                                <ul class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-2">
+                                                                    <li class="list-inline-item fw-semibold">
+                                                                        <i class="fa fa-pen"></i> Some position
+                                                                    </li>
+                                                                    <li class="list-inline-item fw-semibold">
+                                                                        <i class="fa fa-map"></i> Azerbaijan
+                                                                    </li>
+                                                                    <li class="list-inline-item fw-semibold">
+                                                                        <i class="fa fa-calendar-alt"></i> 10-04-2022
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- <a href="javascript:void(0)" class="btn btn-primary text-nowrap">
+                                                                <i class="bx bx-user-check"></i> Connected
+                                                            </a> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/ Header -->
 
 
 
-				<div class="navbar-collapse collapse">
-					<ul class="navbar-nav navbar-align d-flex justify-content-end ms-auto">
+                                    <!-- User Profile Content -->
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6">
+                                            <!-- About User -->
+                                            <div class="card profile-info__card mb-4">
+                                                <div class="card-body">
+                                                    <h6 class="text-muted text-uppercase">About contact</h6>
+                                                    <ul class="list-unstyled ms-3 mb-4 mt-3">
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-user"></i><span class="fw-semibold mx-2">Name:</span>
+                                                            <span>John Doe</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-check"></i><span class="fw-semibold mx-2">ID number :</span>
+                                                            <span>Active</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-star"></i><span class="fw-semibold mx-2">Category:</span>
+                                                            <span>Developer</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-flag"></i><span class="fw-semibold mx-2">Country:</span>
+                                                            <span>USA</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-info-circle"></i><span class="fw-semibold mx-2">Sales volume:</span>
+                                                            <span>English</span>
+                                                        </li>
+                                                    </ul>
+                                                    <h6 class="text-muted text-uppercase">Contacts</h6>
+                                                    <ul class="list-unstyled ms-3 mb-4 mt-3">
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa-solid fa-user-check"></i><span class="fw-semibold mx-2">Contact person, position:</span>
+                                                            <span>John Doe</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-phone"></i><span class="fw-semibold mx-2">Contact Information:</span>
+                                                            <span>(123) 456-7890</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa-light fa-globe"></i><span class="fw-semibold mx-2">Web site:</span>
+                                                            <span>john.doe</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-envelope"></i><span class="fw-semibold mx-2">Email:</span>
+                                                            <span>john.doe@example.com</span>
+                                                        </li>
+                                                    </ul>
+                                                    <h6 class="text-muted text-uppercase">Social links</h6>
+                                                    <ul class="social-icons list-unstyled ms-3 mt-3 mb-0">
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa-brands fa-facebook-square me-2"></i>
+                                                            <div class="d-flex flex-wrap">
+                                                                <a href="#">
+                                                                    <span class="fw-semibold me-2">Facebook</span>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa-brands fa-instagram me-2"></i>
+                                                            <div class="d-flex flex-wrap">
+                                                                <a href="#">
+                                                                    <span class="fw-semibold me-2">Instagram</span>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa-brands fa-twitter-square me-2"></i>
+                                                            <div class="d-flex flex-wrap">
+                                                                <a href="#">
+                                                                    <span class="fw-semibold me-2">Twitter</span>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa-brands fa-linkedin me-2"></i>
+                                                            <div class="d-flex flex-wrap">
+                                                                <a href="#">
+                                                                    <span class="fw-semibold me-2">Linkedin</span>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa-brands fa-telegram me-2"></i>
+                                                            <div class="d-flex flex-wrap">
+                                                                <a href="#">
+                                                                    <span class="fw-semibold me-2">Telegram</span>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa-brands fa-youtube-square me-2"></i>
+                                                            <div class="d-flex flex-wrap">
+                                                                <a href="#">
+                                                                    <span class="fw-semibold me-2">Youtube</span>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--/ About User -->
 
-						<li class="nav-item dropdown ">
-							<a class="nav-flag dropdown-toggle language-dropdown" href="#" id="languageDropdown"
-								data-bs-toggle="dropdown">
-								<img src="assets/imgs/flags/us.png" alt="English" />
-							</a>
-							<div class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-								<a class="dropdown-item" href="#">
-									<img src="assets/imgs/flags/us.png" alt="English" width="20" class="align-middle me-1" />
-									<span class="align-middle">English</span>
-								</a>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6">
+                                            <!-- About User -->
+                                            <div class="card profile-info__card mb-4">
+                                                <div class="card-body">
+                                                    <h6 class="text-muted text-uppercase">Team members</h6>
+                                                    <ul class="list-unstyled ms-3 mb-4 mt-3">
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-user"></i><span class="fw-semibold mx-2">Name:</span>
+                                                            <span>John Doe</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-user"></i><span class="fw-semibold mx-2">Name:</span>
+                                                            <span>John Doe</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-user"></i><span class="fw-semibold mx-2">Name:</span>
+                                                            <span>John Doe</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa fa-user	"></i><span class="fw-semibold mx-2">Name:</span>
+                                                            <span>John Doe</span>
+                                                        </li>
+                                                    </ul>
+                                                    <h6 class="text-muted text-uppercase">About team</h6>
+                                                    <ul class="list-unstyled ms-3 mb-4 mt-3">
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa-regular fa-comment"></i><span class="fw-semibold mx-2">Short description:</span>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quas nemo commodi fugiat esse non, ea beatae quos sunt fugit minima at quasi debitis possimus soluta ratione quae, qui blanditiis.</span>
+                                                        </li>
 
-								<a class="dropdown-item" href="#">
-									<img src="assets/imgs/flags/ru.png" alt="Russian" width="20" class="align-middle me-1" />
-									<span class="align-middle">Russian</span>
-								</a>
+                                                    </ul>
+                                                    <h6 class="text-muted text-uppercase">Presentations</h6>
+                                                    <ul class="list-unstyled ms-3 mt-3 mb-3">
+                                                        <li class="d-flex align-items-center mb-1">
+                                                            <h6>
+                                                                <a class="link-secondary" href="#">
+                                                                    <i class="fa-solid fa-file me-2"></i>filename 1 (42 KB)
+                                                                </a>
+                                                            </h6>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-1">
+                                                            <h6>
+                                                                <a class="link-secondary" href="#">
+                                                                    <i class="fa-solid fa-file me-2"></i>filename 1 (42 KB)
+                                                                </a>
+                                                            </h6>
+                                                        </li>
+                                                        <li class="d-flex align-items-center mb-1">
+                                                            <h6>
+                                                                <a class="link-secondary" href="#">
+                                                                    <i class="fa-solid fa-file me-2"></i>filename 1 (42 KB)
+                                                                </a>
+                                                            </h6>
+                                                        </li>
+                                                    </ul>
+                                                    <h6 class="text-muted text-uppercase">Business model</h6>
+                                                    <ul class="list-unstyled ms-3 mt-3 mb-0">
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <i class="fa-solid fa-briefcase"></i><span class="fw-semibold mx-2">Name:</span>
+                                                            <span>Some model</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--/ About User -->
 
-								<a class="dropdown-item" href="#">
-									<img src="assets/imgs/flags/az.png" alt="Azerbaijani" width="20" class="align-middle me-1" />
-									<span class="align-middle">Azerbaijani</span>
-								</a>
+                                        </div>
 
-							</div>
-						</li>
-
-					</ul>
-				</div>
-			</nav>
-
-			<main class="content p-4 p-md-5 pt-5">
-				<div class="container-fluid p-0">
-
-					<div class="row mb-2 mb-xl-3">
-
-						<div class="col-xl-12 col-xxl-12">
+                                    </div>
+                                    <!--/ User Profile Content -->
+                                </div>
+                                <!-- / Content -->
 
 
-						</div>
-					</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
 
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row text-muted">
+                        <div class="col-6 text-start">
+                            <p class="mb-0">
+                                <a href="https://adminkit.io/" target="_blank" class="text-muted"><strong>TeknoFest</strong></a> &copy;
+                            </p>
+                        </div>
+                        <div class="col-6 text-end">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="#">Support</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="#">Help Center</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="#">Privacy</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-muted" href="#">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
 
-
-				</div>
-			</main>
-
-			<footer class="footer">
-				<div class="container-fluid">
-					<div class="row text-muted">
-						<div class="col-6 text-start">
-							<p class="mb-0">
-								<a href="https://adminkit.io/" target="_blank" class="text-muted"><strong>ERA
-										Team</strong></a> &copy;
-							</p>
-						</div>
-						<div class="col-6 text-end">
-							<ul class="list-inline">
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Support</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Help Center</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Privacy</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Terms</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</footer>
-
-		</div>
-	</div>
-
-	<script src="assets/plugins/jquery/jquery.min.js"></script>
-	<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/js/custom.js"></script>
-
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
-
 
 </html>

@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
 
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <!-- Slim Select -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css" rel="stylesheet">
+    <!-- FontAwesome 6 -->
     <script defer src="assets/plugins/fontawesome/js/all.js"></script>
 
     <link rel="stylesheet" href="assets/css/custom.css" />
@@ -37,22 +40,16 @@
                         <a href="index.html"><span class="fa fa-home me-3"></span> Home</a>
                     </li>
                     <li>
-                        <a href="description.html"><span class="fa fa-user me-3"></span> About</a>
+                        <a href="description.html"><span class="fa fa-info-circle me-3"></span> Profile description</a>
                     </li>
                     <li>
-                        <a href="startup-form.html"><span class="fa fa-briefcase me-3"></span> Works</a>
+                        <a href="startup-form.html"><span class="fa fa-pen me-3"></span> Profile edit</a>
                     </li>
                     <li>
-                        <a href="#"><span class="fa fa-sticky-note me-3"></span> Blog</a>
+                        <a href="#"><span class="fa fa-handshake me-3"></span> My appointments</a>
                     </li>
                     <li>
-                        <a href="#"><span class="fa fa-suitcase me-3"></span> Gallery</a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="fa fa-cogs me-3"></span> Services</a>
-                    </li>
-                    <li>
-                        <a href="login.html"><span class="fa fa-paper-plane me-3"></span> Contacts</a>
+                        <a href="login.html"><span class="fa fa-user me-3"></span> Login</a>
                     </li>
                 </ul>
 
@@ -110,12 +107,12 @@
 
                                 <div class="container-xxl flex-grow-1 container-p-y px-0 px-sm-2">
                                     <h4 class="fw-bold py-3 mb-4">
-                                        <span class="text-muted fw-light">Account Settings /</span> Account
+                                        <span class="text-muted fw-light">Company /</span> Startup edit
                                     </h4>
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                                            <!-- <ul class="nav nav-pills flex-column flex-md-row mb-3">
                                                 <li class="nav-item">
                                                     <a class="nav-link active" href="javascript:void(0);"><i
 															class="bx bx-user me-1"></i> Account</a>
@@ -129,18 +126,18 @@
 															class="bx bx-link-alt me-1"></i>
 														Connections</a>
                                                 </li>
-                                            </ul>
+                                            </ul> -->
                                             <div class="card mb-4">
-                                                <h5 class="card-header">Profile Details</h5>
+                                                <h5 class="card-header">Startup edit page</h5>
                                                 <!-- Account -->
                                                 <div class="card-body ">
                                                     <div class="d-flex align-items-start align-items-sm-center gap-4">
                                                         <img src="https://cdn.teknofestazerbaycan.org/media/upload/userFormUpload/icky2MWj9WkGuv9g76tnVQpVrnGU8bdb.png" alt="user-avatar" class="d-block rounded" height="100" id="uploadedAvatar" />
                                                         <div class="button-wrapper">
-                                                            <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                                            <label for="logo" class="btn btn-primary me-2 mb-4" tabindex="0">
 																					<span class="d-none d-sm-block">Upload new photo</span>
 																					<i class="fa-solid fa-upload d-block d-sm-none"></i>
-																					<input type="file" id="upload" class="account-file-input" hidden=""
+																					<input type="file" id="logo" class="account-file-input" hidden=""
 																						accept="image/png, image/jpeg" />
 																				</label>
                                                             <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
@@ -156,46 +153,77 @@
                                                 </div>
                                                 <hr class="my-0" />
                                                 <div class="card-body">
-                                                    <form id="formAccountSettings" method="POST" onsubmit="return false">
+                                                    <form id="formProfileSettings" method="POST" onsubmit="">
                                                         <div class="row">
                                                             <div class="mb-3 col-md-6">
-                                                                <label for="firstName" class="form-label">First Name</label>
-                                                                <input class="form-control" type="text" id="firstName" name="firstName" value="John" autofocus="" />
-                                                            </div>
-                                                            <div class="mb-3 col-md-6">
-                                                                <label for="lastName" class="form-label">Last Name</label>
-                                                                <input class="form-control" type="text" name="lastName" id="lastName" value="Doe" />
+                                                                <label for="fullname" class="form-label">Name</label>
+                                                                <input class="form-control" type="text" id="fullname" name="fullname" value="Filanko" autofocus="" />
                                                             </div>
                                                             <div class="mb-3 col-md-6">
                                                                 <label for="email" class="form-label">E-mail</label>
-                                                                <input class="form-control" type="text" id="email" name="email" value="john.doe@example.com" placeholder="john.doe@example.com" />
+                                                                <input class="form-control" type="text" id="email" name="email" value="filanko@example.com" placeholder="filanko@example.com" />
                                                             </div>
                                                             <div class="mb-3 col-md-6">
-                                                                <label for="organization" class="form-label">Organization</label>
-                                                                <input type="text" class="form-control" id="organization" name="organization" value="ThemeSelection" />
+                                                                <label for="IDnumber" class="form-label">ID number</label>
+                                                                <input class="form-control" type="text" name="IDnumber" id="IDnumber" value="AZE012345678" />
                                                             </div>
                                                             <div class="mb-3 col-md-6">
+                                                                <label for="category" class="form-label">Category</label>
+                                                                <select id="category" multiple>
+                                                                    <option value="value 1">Value 1</option>
+                                                                    <option value="value 2">Value 2</option>
+                                                                    <option value="value 3">Value 3</option>
+                                                                    <option value="value 4">Value 4</option>
+                                                                    <option value="value 5">Value 5</option>
+                                                                    <option value="value 6">Value 6</option>
+                                                                    <option value="value 7">Value 7</option>
+                                                                    <option value="value 8">Value 21</option>
+                                                                    <option value="value 13">Value 23</option>
+                                                                    <option value="value 11">Value 13</option>
+                                                                    <option value="value 12">Value 25</option>
+                                                                    <option value="value 23">Value 37</option>
+                                                                  </select>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6">
+                                                                <label for="website" class="form-label">Web site</label>
+                                                                <input type="text" class="form-control" id="website" name="website" value="www.site.az" />
+                                                            </div>
+                                                            <div class="mb-3 col-md-6">
+                                                                <label for="sales-volume" class="form-label">Sales volume</label>
+                                                                <select id="sales-volume">
+                                                                    <option value="value 0">Select sales volume</option>
+                                                                    <option value="value 1">Value 1</option>
+                                                                    <option value="value 2">Value 2</option>
+                                                                    <option value="value 3">Value 3</option>
+                                                                    <option value="value 4">Value 4</option>
+                                                                    <option value="value 5">Value 5</option>
+                                                                    <option value="value 6">Value 6</option>
+                                                                    <option value="value 7">Value 7</option>
+                                                                    <option value="value 8">Value 21</option>
+                                                                    <option value="value 13">Value 23</option>
+                                                                    <option value="value 11">Value 13</option>
+                                                                    <option value="value 12">Value 25</option>
+                                                                    <option value="value 23">Value 37</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="mb-3 col-md-6">
+                                                                <label for="contactPerson" class="form-label">Contact person, position</label>
+                                                                <input type="text" class="form-control" id="contactPerson" name="contactPerson" value="Milanko" />
+                                                            </div>
+                                                            <div class="mb-3 col-md-6">
+                                                                <label for="contactInfo" class="form-label">Contact Information</label>
+                                                                <input type="text" class="form-control" id="contactInfo" name="contactInfo" value="Milanko" />
+                                                            </div>
+                                                            <!-- <div class="mb-3 col-md-6">
                                                                 <label class="form-label" for="phoneNumber">Phone Number</label>
                                                                 <div class="input-group input-group-merge">
                                                                     <span class="input-group-text">US (+1)</span>
                                                                     <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="202 555 0111" />
                                                                 </div>
-                                                            </div>
-                                                            <div class="mb-3 col-md-6">
-                                                                <label for="address" class="form-label">Address</label>
-                                                                <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
-                                                            </div>
-                                                            <div class="mb-3 col-md-6">
-                                                                <label for="state" class="form-label">State</label>
-                                                                <input class="form-control" type="text" id="state" name="state" placeholder="California" />
-                                                            </div>
-                                                            <div class="mb-3 col-md-6">
-                                                                <label for="zipCode" class="form-label">Zip Code</label>
-                                                                <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="231465" maxlength="6" />
-                                                            </div>
-                                                            <div class="mb-3 col-md-6">
+                                                            </div> -->
+                                                            <div class="mb-3 col-md-12">
                                                                 <label class="form-label" for="country">Country</label>
-                                                                <select id="country" class="select2 form-select">
+                                                                <select id="country">
 																	<option value="">Select</option>
 																	<option value="Australia">Australia</option>
 																	<option value="Bangladesh">
@@ -239,89 +267,106 @@
 																	</option>
 																</select>
                                                             </div>
-                                                            <div class="mb-3 col-md-6">
-                                                                <label for="language" class="form-label">Language</label>
-                                                                <select id="language" class="select2 form-select">
-																	<option value="">Select Language</option>
-																	<option value="en">English</option>
-																	<option value="fr">French</option>
-																	<option value="de">German</option>
-																	<option value="pt">Portuguese</option>
-																</select>
+                                                            <div class="mb-3 col-md-12">
+                                                                <div class="container-fluid p-0">
+                                                                    <div class="row">
+                                                                        <label for="teamMembers" class="form-label">Team members</label>
+                                                                        <div class="col-md-6">
+                                                                            <input type="text" class="form-control mb-3" id="teamMember1" name="teamMember1" value="Milanko" />
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <input type="text" class="form-control mb-3" id="teamMember2" name="teamMember2" value="Milanko" />
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <input type="text" class="form-control mb-3 mb-md-0" id="teamMember3" name="teamMember3" value="Milanko" />
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <input type="text" class="form-control" id="teamMember4" name="teamMember4" value="Milanko" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-3 col-md-12">
+                                                                <label for="shortDescription" class="form-label">Short description </label>
+                                                                <textarea type="text" class="form-control" id="shortDescription" name="shortDescription" value="Short description"> </textarea>
                                                             </div>
                                                             <div class="mb-3 col-md-6">
-                                                                <label for="timeZones" class="form-label">Timezone</label>
-                                                                <select id="timeZones" class="select2 form-select">
-																	<option value="">Select Timezone</option>
-																	<option value="-12">
-																		(GMT-12:00) International Date Line West
-																	</option>
-																	<option value="-11">
-																		(GMT-11:00) Midway Island, Samoa
-																	</option>
-																	<option value="-10">
-																		(GMT-10:00) Hawaii
-																	</option>
-																	<option value="-9">
-																		(GMT-09:00) Alaska
-																	</option>
-																	<option value="-8">
-																		(GMT-08:00) Pacific Time (US &amp; Canada)
-																	</option>
-																	<option value="-8">
-																		(GMT-08:00) Tijuana, Baja California
-																	</option>
-																	<option value="-7">
-																		(GMT-07:00) Arizona
-																	</option>
-																	<option value="-7">
-																		(GMT-07:00) Chihuahua, La Paz, Mazatlan
-																	</option>
-																	<option value="-7">
-																		(GMT-07:00) Mountain Time (US &amp;
-																		Canada)
-																	</option>
-																	<option value="-6">
-																		(GMT-06:00) Central America
-																	</option>
-																	<option value="-6">
-																		(GMT-06:00) Central Time (US &amp; Canada)
-																	</option>
-																	<option value="-6">
-																		(GMT-06:00) Guadalajara, Mexico City,
-																		Monterrey
-																	</option>
-																	<option value="-6">
-																		(GMT-06:00) Saskatchewan
-																	</option>
-																	<option value="-5">
-																		(GMT-05:00) Bogota, Lima, Quito, Rio
-																		Branco
-																	</option>
-																	<option value="-5">
-																		(GMT-05:00) Eastern Time (US &amp; Canada)
-																	</option>
-																	<option value="-5">
-																		(GMT-05:00) Indiana (East)
-																	</option>
-																	<option value="-4">
-																		(GMT-04:00) Atlantic Time (Canada)
-																	</option>
-																	<option value="-4">
-																		(GMT-04:00) Caracas, La Paz
-																	</option>
+                                                                <label for="businessModel" class="form-label">Business model</label>
+                                                                <select id="businessModel">
+																	<option value="">Select Business model</option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
 																</select>
                                                             </div>
-                                                            <div class="mb-3 col-md-6">
-                                                                <label for="currency" class="form-label">Currency</label>
-                                                                <select id="currency" class="select2 form-select">
-																	<option value="">Select Currency</option>
-																	<option value="usd">USD</option>
-																	<option value="euro">Euro</option>
-																	<option value="pound">Pound</option>
-																	<option value="bitcoin">Bitcoin</option>
-																</select>
+
+                                                            <div class="mb-3 col-md-12">
+                                                                <div class="container-fluid p-0">
+                                                                    <div class="row">
+                                                                        <label for="socialAddresses" class="form-label">Addresses in social networks</label>
+                                                                        <div class="col-md-6 d-flex justify-content-between align-items-center mb-3">
+                                                                            <span class="social-icons mx-2"><i class="fa-brands fa-facebook-square"></i></span>
+                                                                            <input type="text" class="form-control" id="facebook" name="facebook" value="Facebook" />
+                                                                        </div>
+                                                                        <div class="col-md-6 d-flex justify-content-between align-items-center mb-3">
+                                                                            <span class="social-icons mx-2"><i class="fa-brands fa-instagram"></i></span>
+                                                                            <input type="text" class="form-control" id="instagram" name="instagram" value="Instagram" />
+                                                                        </div>
+                                                                        <div class="col-md-6 d-flex justify-content-between align-items-center mb-3">
+                                                                            <span class="social-icons mx-2"><i class="fa-brands fa-twitter-square"></i></span>
+                                                                            <input type="text" class="form-control" id="twitter" name="twitter" value="Twitter" />
+                                                                        </div>
+                                                                        <div class="col-md-6 d-flex justify-content-between align-items-center mb-3">
+                                                                            <span class="social-icons mx-2"><i class="fa-brands fa-telegram"></i></span>
+                                                                            <input type="text" class="form-control" id="telegram" name="telegram" value="Telegram" />
+                                                                        </div>
+                                                                        <div class="col-md-6 d-flex justify-content-between align-items-center mb-3 mb-md-0">
+                                                                            <span class="social-icons mx-2"><i class="fa-brands fa-linkedin"></i></span>
+                                                                            <input type="text" class="form-control" id="linkedin" name="linkedin" value="Linkedin" />
+                                                                        </div>
+                                                                        <div class="col-md-6 d-flex justify-content-between align-items-center">
+                                                                            <span class="social-icons mx-2"><i class="fa-brands fa-youtube-square"></i></span>
+                                                                            <input type="text" class="form-control" id="youtube" name="youtube" value="Youtube" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
+                                                            <div class="mb-3 col-md-12 button-wrapper">
+                                                                <span class="form-label"> Presentation</span>
+                                                                <div class="container-fluid p-0">
+                                                                    <div class="row">
+                                                                        <div class="mb-3 col-md-6">
+                                                                            <label for="presentation" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                                                    <span class="d-none d-sm-block">Upload presentation</span>
+                                                                    <i class="fa-solid fa-presentation d-block d-sm-none"></i>
+                                                                    <input type="file" id="presentation" class="account-file-input" hidden="" accept="image/png, image/jpeg" />
+                                                                </label>
+                                                                            <p class="text-muted mt-0 mb-3">
+                                                                                Allowed PDF, PPT. Max size of 8000K
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="mb-3 col-md-6">
+                                                                            <h6>
+                                                                                <a class="link-secondary" href="#">
+                                                                                    <i class="fa-solid fa-file me-2"></i>filename 1 (42 KB)
+                                                                                </a>
+                                                                            </h6>
+                                                                            <h6>
+                                                                                <a class="link-secondary" href="#">
+                                                                                    <i class="fa-solid fa-file me-2"></i>filename 1 (42 KB)
+                                                                                </a>
+                                                                            </h6>
+                                                                            <h6>
+                                                                                <a class="link-secondary" href="#">
+                                                                                    <i class="fa-solid fa-file me-2"></i>filename 1 (42 KB)
+                                                                                </a>
+                                                                            </h6>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
                                                         </div>
                                                         <div class="mt-2">
                                                             <button type="submit" class="btn btn-primary me-2">
@@ -335,7 +380,7 @@
                                                 </div>
                                                 <!-- /Account -->
                                             </div>
-                                            <div class="card">
+                                            <!-- <div class="card">
                                                 <h5 class="card-header">Delete Account</h5>
                                                 <div class="card-body">
                                                     <div class="mb-3 col-12 mb-0">
@@ -359,7 +404,7 @@
 														</button>
                                                     </form>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -375,7 +420,7 @@
                     <div class="row text-muted">
                         <div class="col-6 text-start">
                             <p class="mb-0">
-                                <a href="https://adminkit.io/" target="_blank" class="text-muted"><strong>ERA Team</strong></a> &copy;
+                                <a href="https://adminkit.io/" target="_blank" class="text-muted"><strong>TeknoFest</strong></a> &copy;
                             </p>
                         </div>
                         <div class="col-6 text-end">
@@ -402,7 +447,48 @@
 
     <script src="assets/plugins/jquery/jquery.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
     <script src="assets/js/custom.js"></script>
+
+
+    <script>
+        var multiSelect = new SlimSelect({
+            select: '#category',
+            placeholder: 'Placeholder Text Here',
+            allowDeselectOption: true,
+            showSearch: true,
+            searchText: 'Sorry nothing to see here',
+            searchPlaceholder: 'Search...',
+            searchFocus: true, // Whether or not to focus on the search input field
+            searchHighlight: true,
+            closeOnSelect: false
+        });
+        multiSelect.selected();
+
+        var singleSelect = new SlimSelect({
+            select: '#sales-volume',
+            placeholder: 'Placeholder Text Here',
+            allowDeselectOption: false,
+            showSearch: false,
+            closeOnSelect: true
+        });
+        new SlimSelect({
+            select: '#country',
+            placeholder: 'Placeholder Text Here',
+            allowDeselectOption: false,
+            showSearch: false,
+            closeOnSelect: true
+        });
+        new SlimSelect({
+            select: '#businessModel',
+            placeholder: 'Placeholder Text Here',
+            allowDeselectOption: false,
+            showSearch: false,
+            closeOnSelect: true
+        });
+        singleSelect.selected();
+    </script>
+
 </body>
 
 </html>
