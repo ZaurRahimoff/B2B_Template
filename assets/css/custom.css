@@ -46,8 +46,17 @@ button:focus {
     cursor: pointer !important;
 }
 
+.fw-semibold {
+    font-weight: 600 !important;
+}
+
 .wrapper {
     width: 100%;
+}
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: #a1acb8 !important;
 }
 
 
@@ -108,15 +117,21 @@ button:focus {
     -webkit-filter: drop-shadow(2px 4px 6px #000000);
 }
 
+#sidebar h1 .logo-white img {
+    color: #fff;
+}
+
 #sidebar h1 .logo .logo-title {
     display: flex;
     text-transform: uppercase;
 }
 
+#sidebar h1 .logo-white .logo-title span:first-child,
 #sidebar h1 .logo .logo-title span:first-child {
     color: #df3b23;
 }
 
+#sidebar h1 .logo-white .logo-title span:last-child,
 #sidebar h1 .logo .logo-title span:last-child {
     color: #ffffff;
 }
@@ -1129,27 +1144,31 @@ a[data-toggle="collapse"] {
 
 /* ================ Startup form style ==================== */
 
-.profile-form .btn-primary {
+.profile-form .btn-primary,
+.team-profile .btn-primary {
     color: #fff;
     background-color: #696cff;
     border-color: #696cff;
     box-shadow: 0 0.125rem 0.25rem 0 rgb(105 108 255 / 40%);
 }
 
-.profile-form .btn-primary:hover {
+.profile-form .btn-primary:hover,
+.team-profile .btn-primary:hover {
     color: #fff;
     background-color: #5f61e6;
     border-color: #5f61e6;
     transform: translateY(-1px);
 }
 
-.profile-form .btn-outline-secondary {
+.profile-form .btn-outline-secondary,
+.team-profile .btn-outline-secondary {
     color: #8592a3;
     border-color: #8592a3;
     background: transparent;
 }
 
-.profile-form .btn-outline-secondary:hover {
+.profile-form .btn-outline-secondary:hover,
+.team-profile .btn-outline-secondary:hover {
     color: #fff;
     background-color: #788393;
     border-color: #788393;
@@ -1166,6 +1185,7 @@ a[data-toggle="collapse"] {
     background-color: #fff;
     background-clip: border-box;
     border: 0 solid #d9dee3;
+    box-shadow: 0 2px 6px 0 rgb(67 89 113 / 12%);
     border-radius: 0.5rem;
 }
 
@@ -1327,6 +1347,80 @@ a[data-toggle="collapse"] {
     font-size: 85%;
     color: #b4bdc6;
 }
+
+
+/* ------------- Select style ---------------- */
+
+.ss-content {
+    margin: 0;
+}
+
+.ss-main .ss-multi-selected.ss-open-below,
+.ss-main .ss-single-selected.ss-open-below {
+    border-color: #696cff !important;
+    outline: 0;
+    box-shadow: 0 0 0.25rem 0.05rem rgb(105 108 255 / 10%)
+}
+
+.ss-main .ss-multi-selected,
+.ss-main .ss-single-selected {
+    min-height: 38.8px;
+    border-radius: 0.375rem;
+}
+
+.ss-main .ss-multi-selected .ss-add {
+    margin: 0px 12px 0 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ss-main .ss-multi-selected .ss-values {
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+
+.ss-main .ss-multi-selected .ss-values .ss-value {
+    flex: none;
+}
+
+.ss-content .ss-search input:focus {
+    color: #697a8d;
+    background-color: #fff;
+    border-color: #696cff !important;
+    outline: 0;
+    box-shadow: 0 0 0.25rem 0.05rem rgb(105 108 255 / 10%)
+}
+
+.social-icons svg {
+    height: 1.5em;
+}
+
+.social-icons svg.fa-facebook-square path {
+    fill: #1877f2;
+}
+
+.social-icons svg.fa-instagram path {
+    fill: #c32aa3;
+}
+
+.social-icons svg.fa-twitter-square path {
+    fill: #1da1f2;
+}
+
+.social-icons svg.fa-telegram path {
+    fill: #0088cc;
+}
+
+.social-icons svg.fa-linkedin path {
+    fill: #0a66c2;
+}
+
+.social-icons svg.fa-youtube-square path {
+    fill: #ff0000;
+}
+
+
+/* ----------- Form style --------------- */
 
 .form-control {
     display: block;
@@ -1530,6 +1624,12 @@ textarea.form-control-lg {
 .form-control-color::-webkit-color-swatch {
     height: 1.53em;
     border-radius: 0.375rem;
+}
+
+.form-label {
+    color: #5a5a5a;
+    font-weight: 500;
+    font-size: medium;
 }
 
 .form-select {
@@ -1961,4 +2061,57 @@ textarea.form-control-lg {
     margin-left: -1px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+
+/* --------- Profile style ----------- */
+
+.layout-content-navbar .content-wrapper {
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: stretch;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.layout-page,
+.content-wrapper,
+.content-wrapper>*,
+.layout-menu {
+    min-height: 1px;
+}
+
+.content-wrapper {
+    padding-bottom: 38.9375px !important;
+}
+
+.team-profile-header-banner img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 250px;
+}
+
+.team-profile-header {
+    margin-top: -2rem
+}
+
+.team-profile-header .team-profile-img {
+    border: 5px solid;
+    width: 120px;
+    border-color: #fff;
+    background-color: #ffffff;
+}
+
+@media(max-width: 767.98px) {
+    .team-profile-header-banner img {
+        height: 150px;
+    }
+    .team-profile-header .team-profile-img {
+        width: 100px;
+    }
 }
